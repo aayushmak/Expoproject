@@ -9,11 +9,11 @@ import java.util.*;
 
 // This class is used to create a loading screen
 class SplashScreen {
-    JFrame frame;
-    JLabel image=new JLabel(new ImageIcon("img11.jpg"));
-    JLabel text=new JLabel("PASSWORD & NOTES MANAGER");
+    JFrame frame = new JFrame();
+    JLabel background = new JLabel(new ImageIcon("img11.jpg"));
+    JLabel text = new JLabel("Password & Notes Manager");
     JProgressBar progressBar=new JProgressBar();
-    JLabel message=new JLabel();
+    JLabel message =new JLabel();
 
     SplashScreen() {
         createGUI();
@@ -24,26 +24,26 @@ class SplashScreen {
     }
 
     public void createGUI(){
-        frame=new JFrame(); // to create a frame
+        frame=new JFrame();// to create a frame
         frame.getContentPane().setLayout(null); // to set the layout of the frame
         frame.setUndecorated(true);
         frame.setSize(400,400); // to set the size of the frame
         frame.setLocationRelativeTo(null);
-        frame.getContentPane().setBackground(new Color(0x87FFE3)); // to set the background color of the frame
+
         frame.setVisible(true);
     }
 
     public void addImage(){
-        image.setSize(400,200); // to set the size of the image
-        frame.add(image);
+        background.setSize(400,400); // to set the size of the image
+        frame.add(background);
     }
 
     public void addText()
     {
-        text.setFont(new Font("Gabriola",Font.BOLD,30)); // to set the font of the text
+        text.setFont(new Font("Segoe UI Emoji",Font.BOLD,49/2)); // to set the font of the text
         text.setBounds(30,200,400,50);
         text.setForeground(Color.black);
-        frame.add(text);
+        background.add(text);
     }
 
     public void addProgressBar(){
